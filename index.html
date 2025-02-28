@@ -116,7 +116,7 @@
               ShopEase
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
               Fix Mobile Button Issue
             </h1>
 
@@ -159,7 +159,7 @@
               CloudSync
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
               Add Dark Mode
             </h1>
 
@@ -201,8 +201,8 @@
               SwiftPay
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
-              Optimize Home page 
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+              Optimize Home page
             </h1>
 
             <div class="space-y-3">
@@ -244,7 +244,7 @@
               Meta
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
               Add new emoji 🤲
             </h1>
 
@@ -287,7 +287,7 @@
               Google LLC
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
               Integrate OpenAI API
             </h1>
 
@@ -330,7 +330,7 @@
               Glassdoar
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950">
+            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
               Improve Job searching
             </h1>
 
@@ -379,6 +379,7 @@
           </div>
 
           <button
+            onclick="clearHistory()"
             class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer"
           >
             Clear History
@@ -387,9 +388,8 @@
 
         <!-- task complete history -->
         <div id="history-container">
-          <div class="text-gray-600 mt-5 m-6 bg-light-blue rounded-lg p-2 py-3">
-            <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-          </div>
+          <!-- <div class="text-gray-600 mt-5 m-6 bg-light-blue rounded-lg p-2 py-3">
+            <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p> -->
         </div>
       </aside>
     </main>

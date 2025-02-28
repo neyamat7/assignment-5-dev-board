@@ -1,10 +1,11 @@
 // complete button handler
-
+let date = new Date();
 const completeBtn = document.querySelectorAll(".complete-btn");
 
 for (const btn of completeBtn) {
   btn.addEventListener("click", function (event) {
     event.preventDefault();
+
     // add disable attribute and disable class
     event.target.setAttribute("disabled", "");
     event.target.classList.remove("cursor-pointer");
@@ -24,15 +25,51 @@ for (const btn of completeBtn) {
     console.log(convertedCompleteTaskValue);
     completeTaskValue.innerText = convertedCompleteTaskValue + 1;
 
+    // successful alert after clicking complete button
+    if (taskValue.innerText === "0") {
+      alert("You have completed all tasks");
+    } else {
+      alert("Board Updated Successfully");
+    }
+
+    // get card title
+    // console.log(document.querySelectorAll(".title"));
+    const title =
+      event.target.parentNode.parentNode.parentNode.querySelector(
+        ".title"
+      ).innerText;
+
     // add history data
     // get history container element
     const historyContainer = document.getElementById("history-container");
-    console.log(historyContainer);
+    const div = document.createElement("div");
+    div.classList.add(
+      "text-gray-600",
+      "mt-5",
+      "m-6",
+      "bg-light-blue",
+      "rounded-lg",
+      "p-2",
+      "py-3"
+    );
+    div.innerHTML = `
+    <p>You have Complete The Task ${title} at ${date.toLocaleTimeString()}</p>
+    `;
+    historyContainer.appendChild(div);
+
+    // update task value if it has double zero
+    if (taskValue.innerText === "0") {
+      taskValue.innerText = "";
+    }
   });
 }
 
+// clear history handler
+function clearHistory() {
+  document.getElementById("history-container").innerHTML = "";
+}
+
 // dynamic date
-let date = new Date();
 let dateFormat = {
   weekday: "short",
   month: "short",
