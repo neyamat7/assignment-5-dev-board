@@ -4,8 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+
+    <!-- google font poppins link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css link -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- custom theme variable -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-light-blue: #f4f7ff;
+        --font-poppins: "Poppins", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <h1>this is blog page</h1>
+  <body class="bg-light-blue font-poppins">
+    <header class="max-w-screen-2xl mx-auto mt-6">
+      <nav class="flex justify-between bg-white p-5 rounded-2xl">
+        <!-- left side -->
+        <div class="flex gap-2 items-center">
+          <div class="w-12 h-12">
+            <img class="w-full h-full" src="assets/logo.png" alt="" />
+          </div>
+          <h1 class="text-4xl">Dev<strong>Board</strong></h1>
+        </div>
+        <!-- right side -->
+        <div class="flex gap-8 items-center">
+          <button
+            onclick="window.location.href = '../index.html'"
+            class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn text-2xl"
+          >
+            Back to Desk
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <h1 class="text-3xl font-bold text-center my-5">Blogs</h1>
+    <!-- blogs container -->
+    <div class="max-w-screen-2xl mx-auto">
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet
+            est minima ipsum at quo vero nobis aut reprehenderit veritatis.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet
+            est minima ipsum at quo vero nobis aut reprehenderit veritatis.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-3: What is event delegation in the DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet
+            est minima ipsum at quo vero nobis aut reprehenderit veritatis.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-4: What is event bubbling in the DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet
+            est minima ipsum at quo vero nobis aut reprehenderit veritatis.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet
+            est minima ipsum at quo vero nobis aut reprehenderit veritatis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- script links -->
+    <script src="./script/history.js"></script>
   </body>
 </html>

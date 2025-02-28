@@ -27,7 +27,8 @@ for (const btn of completeBtn) {
 
     // successful alert after clicking complete button
     if (taskValue.innerText === "0") {
-      alert("You have completed all tasks");
+      alert("Board Updated Successfully");
+      alert("congrates!!! You have completed all the current task");
     } else {
       alert("Board Updated Successfully");
     }
