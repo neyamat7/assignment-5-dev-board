@@ -30,19 +30,3 @@ for (const btn of completeBtn) {
     console.log(historyContainer);
   });
 }
-
-// dynamic date
-let date = new Date();
-let dateFormat = {
-  weekday: "short",
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-};
-
-let formatedDate = date.toLocaleDateString("en-US", dateFormat).split(" ");
-
-document.getElementById("day-name").innerText = formatedDate[0];
-document.getElementById(
-  "date"
-).innerText = `${formatedDate[1]} ${formatedDate[2]} ${formatedDate[3]}`;
