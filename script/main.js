@@ -80,7 +80,12 @@ let dateFormat = {
 
 let formatedDate = date.toLocaleDateString("en-US", dateFormat).split(" ");
 
-document.getElementById("day-name").innerText = formatedDate[0];
+const dayName = formatedDate[0];
+const monthName = formatedDate[1];
+const dateNumber = formatedDate[2].replace(",", "");
+const yearName = formatedDate[3];
+
+document.getElementById("day-name").innerText = dayName;
 document.getElementById(
   "date"
-).innerText = `${formatedDate[1]} ${formatedDate[2]} ${formatedDate[3]}`;
+).innerText = `${monthName} ${dateNumber} ${yearName}`;
