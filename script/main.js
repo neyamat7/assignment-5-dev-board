@@ -54,7 +54,7 @@ for (const btn of completeBtn) {
       "py-3"
     );
     div.innerHTML = `
-    <p>You have Complete The Task ${title} at ${date.toLocaleTimeString()}</p>
+    <p>You have Complete The Task <span class="font-medium" >${title}</span> at ${date.toLocaleTimeString()}</p>
     `;
     historyContainer.appendChild(div);
 
