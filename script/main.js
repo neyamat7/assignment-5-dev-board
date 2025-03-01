@@ -70,7 +70,7 @@ function clearHistory() {
   document.getElementById("history-container").innerHTML = "";
 }
 
-// dynamic date
+// dynamic date changing
 let dateFormat = {
   weekday: "short",
   month: "short",

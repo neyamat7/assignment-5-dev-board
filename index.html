@@ -26,16 +26,20 @@
   </head>
   <body id="body" class="bg-light-blue font-poppins">
     <header class="max-w-screen-2xl mx-auto mt-6">
-      <nav class="flex justify-between bg-white p-5 rounded-2xl">
+      <nav
+        class="flex justify-between max-[321px]:ml-7 bg-white px-5 py-3 rounded-2xl"
+      >
         <!-- left side -->
         <div class="flex gap-2 items-center">
           <div class="w-12 h-12">
             <img class="w-full h-full" src="assets/logo.png" alt="" />
           </div>
-          <h1 class="text-4xl">Dev<strong>Board</strong></h1>
+          <h1 class="hidden min-[470px]:block text-4xl">
+            Dev<strong>Board</strong>
+          </h1>
         </div>
         <!-- right side -->
-        <div class="flex gap-8 items-center">
+        <div class="flex gap-3 sm:gap-8 items-center">
           <div
             class="flex gap-2 bg-light-blue items-center justify-center p-4 rounded-full"
           >
@@ -57,18 +61,18 @@
     </header>
 
     <!-- main section -->
-    <main class="max-w-screen-2xl mx-auto mt-5 mb-5 grid grid-cols-4 gap-6">
+    <main class="max-w-screen-2xl mx-auto mt-4 mb-5 grid xl:grid-cols-4 gap-6">
       <!-- left side -->
-      <div class="col-span-3 bg-white p-6 rounded-2xl">
+      <div class="xl:col-span-3 bg-white p-6 rounded-2xl">
         <!-- top headings -->
         <div
-          class="grid grid-cols-4 gap-5 border-b border-dashed border-gray-300 pb-7"
+          class="grid md:grid-cols-4 gap-5 border-b border-dashed border-gray-300 pb-5"
         >
           <!--tasks  -->
           <div
-            class="bg-light-blue flex items-center justify-center gap-5 rounded-xl p-5"
+            class="bg-light-blue flex items-center justify-center gap-5 md:gap-2 lg:gap-5 rounded-xl p-5 md:p-2 lg:p-5"
           >
-            <div class="bg-white w-16 h-16 rounded-full p-4 flex">
+            <div class="bg-white w-16 h-16 rounded-full p-4 md:p-3 lg:p-4 flex">
               <img src="assets/checkbox.png" alt="" />
             </div>
             <div>
@@ -80,7 +84,7 @@
           <!-- title -->
           <div
             onclick="blogPage()"
-            class="col-span-2 p-4 bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-300 flex items-center justify-center gap-7 rounded-xl cursor-pointer"
+            class="md:col-span-2 p-4 bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-300 flex items-center justify-center gap-7 rounded-xl cursor-pointer"
           >
             <div class="w-20 h-20">
               <img class="w-full h-full" src="assets/board.png" alt="" />
@@ -92,9 +96,9 @@
 
           <!-- date -->
           <div
-            class="bg-light-blue flex items-center justify-center gap-5 rounded-xl p-5"
+            class="bg-light-blue flex items-center justify-center gap-5 rounded-xl p-5 md:p-2 lg:p-5"
           >
-            <div class="bg-white w-16 h-16 rounded-full p-4 flex">
+            <div class="bg-white w-16 h-16 rounded-full p-4 md:p-3 lg:p-4 flex">
               <img src="assets/calender.png" alt="" />
             </div>
             <div class="text-xl">
@@ -105,18 +109,22 @@
         </div>
 
         <!-- cards container-->
-        <div class="mt-7 grid grid-cols-3 gap-9">
+        <div
+          class="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center"
+        >
           <!-- single card -->
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               ShopEase
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 title"
+            >
               Fix Mobile Button Issue
             </h1>
 
@@ -134,15 +142,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 justify-between items-center mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer complete-btn disabled:opacity-20"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer complete-btn disabled:opacity-20"
                 >
                   Completed
                 </button>
@@ -151,15 +159,17 @@
           </div>
 
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               CloudSync
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 title"
+            >
               Add Dark Mode
             </h1>
 
@@ -176,15 +186,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 items-center justify-between mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
                 >
                   Completed
                 </button>
@@ -193,15 +203,17 @@
           </div>
 
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               SwiftPay
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 title"
+            >
               Optimize Home page
             </h1>
 
@@ -219,15 +231,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 items-center justify-between mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
                 >
                   Completed
                 </button>
@@ -236,15 +248,17 @@
           </div>
 
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               Meta
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 title"
+            >
               Add new emoji 🤲
             </h1>
 
@@ -262,15 +276,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 items-center justify-between mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
                 >
                   Completed
                 </button>
@@ -279,15 +293,17 @@
           </div>
 
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               Google LLC
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 title"
+            >
               Integrate OpenAI API
             </h1>
 
@@ -305,15 +321,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 items-center justify-between mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
                 >
                   Completed
                 </button>
@@ -322,15 +338,17 @@
           </div>
 
           <div
-            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center"
+            class="bg-light-blue p-5 rounded-2xl flex flex-col gap-4 items-center max-w-md"
           >
             <button
-              class="bg-white text-2xl text-cyan-900 rounded-lg p-3 self-start"
+              class="bg-white text-xl text-cyan-900 rounded-lg py-2 px-4 self-start"
             >
               Glassdoar
             </button>
 
-            <h1 class="self-start text-2xl font-medium text-cyan-950 title">
+            <h1
+              class="self-start text-2xl xl:text-xl 2xl:text-2xl font-medium text-cyan-950 lg:whitespace-nowrap title"
+            >
               Improve Job searching
             </h1>
 
@@ -348,15 +366,15 @@
                 class="w-full h-[1px] border-b border-dashed border-gray-400"
               ></div>
               <!-- card date and button -->
-              <div class="flex justify-between mb-0">
+              <div class="flex gap-1 items-center justify-between mb-0">
                 <div>
                   <p class="text-cyan-900">Deadline</p>
-                  <p class="text-xl font-medium text-cyan-950">
+                  <p class="text-lg font-medium text-cyan-950">
                     21 March, 2025
                   </p>
                 </div>
                 <button
-                  class="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
+                  class="bg-blue-600 text-white font-medium py-3 px-4 rounded-lg cursor-pointer disabled:opacity-20 complete-btn"
                 >
                   Completed
                 </button>
