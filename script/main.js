@@ -1,5 +1,4 @@
 // complete button handler
-let date = new Date();
 const completeBtn = document.querySelectorAll(".complete-btn");
 
 for (const btn of completeBtn) {
@@ -34,7 +33,6 @@ for (const btn of completeBtn) {
     }
 
     // get card title
-    // console.log(document.querySelectorAll(".title"));
     const title =
       event.target.parentNode.parentNode.parentNode.querySelector(
         ".title"
@@ -42,6 +40,7 @@ for (const btn of completeBtn) {
 
     // add history data
     // get history container element
+    let date = new Date();
     const historyContainer = document.getElementById("history-container");
     const div = document.createElement("div");
     div.classList.add(
@@ -65,12 +64,18 @@ for (const btn of completeBtn) {
   });
 }
 
+// click to go blog page handler
+function blogPage() {
+  window.location.href = "../blog.html";
+}
+
 // clear history handler
 function clearHistory() {
   document.getElementById("history-container").innerHTML = "";
 }
 
 // dynamic date changing
+let date = new Date();
 let dateFormat = {
   weekday: "short",
   month: "short",
